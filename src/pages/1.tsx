@@ -188,6 +188,8 @@ const PaiBao: React.FC = () => {
             </div>
           </div>
         </div>
+        <div
+        style={{zIndex: 2,}}>
         <div className="top-rectangle">
         </div>
         <img src={aoxian} alt="aoxian" style={{
@@ -491,6 +493,7 @@ const PaiBao: React.FC = () => {
     transform: 'translateX(-50%) rotate(90deg)',
   }}
 />
+</div>
 </div>
 </CSSTransition>
 );
