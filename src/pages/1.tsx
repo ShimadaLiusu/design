@@ -140,4 +140,4 @@ const PaiBao: React.FC = () => {
   );
 };
 
-export { PaiBao };
+export default PaiBao;
