@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useTimer } from 'react-use-precision-timer';
 import CircleProgress from '../components/CircleProgress';
-import Minus from '/src/assets/minus.png';
-import Plus from '/src/assets/plus.png';
+import Minus from './assets/minus.svg';
+import Plus from './assets/plus.svg';
 import './Timer.css';
 
 export interface TimerProps {
