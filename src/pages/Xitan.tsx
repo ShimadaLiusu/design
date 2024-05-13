@@ -4,15 +4,15 @@ import Slider from '../components/Slider';
 import { CSSTransition } from 'react-transition-group';
 import './pages.css'
 
-import svgBackground from '/src/assets/xitan.png';
-import ModePic from '/src/assets/mode.svg';
-import Mask from '/src/assets/Mask.svg';
-import YAPONODI from '/src/assets/YAPONODI.svg';
-import aoxian from '/src/assets/aoxian.svg';
-import apaitan from '/src/assets/apaitan.png';
-import axitan from '/src/assets/axitan.png';
-import abaogao from '/src/assets/abaogao.png';
-import aweihu from '/src/assets/aweihu.png';
+import svgBackground from '../assets/xitan.png';
+import ModePic from '../assets/mode.svg';
+import Mask from '../assets/Mask.svg';
+import YAPONODI from '../assets/YAPONODI.svg';
+import aoxian from '../assets/aoxian.svg';
+import apaitan from '../assets/apaitan.png';
+import axitan from '../assets/axitan.png';
+import abaogao from '../assets/abaogao.png';
+import aweihu from '../assets/aweihu.png';
 
 const Xitan: React.FC = () => {
   const [suction, setSuction] = useState(0.2);

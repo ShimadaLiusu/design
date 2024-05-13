@@ -5,7 +5,8 @@ import Group71 from '/src/assets/Group 71.svg';
 import Group72 from '/src/assets/Group 72.svg';
 import Group73 from '/src/assets/Group 73.svg';
 import Logo from '/src/assets/indexlogo.svg';
-import CheckmarkIcon from '/src/assets/green.svg'; // 添加对勾图标
+import CheckmarkIcon from '/src/assets/green.svg';
+import LoadingGif from '/src/assets/loading.gif';
 
 const Connect: React.FC = () => {
   const [state1, setState1] = useState(false);
@@ -42,9 +43,9 @@ const Connect: React.FC = () => {
 
   const handleNextClick = () => {
     if (state1 && state2 && state3) {
-        setIsLoading(true);
-        navigate('/number');
-      }
+      setIsLoading(true);
+      navigate('/number');
+    }
   };
 
   const handleImageClick = (index: number) => {
@@ -73,66 +74,66 @@ const Connect: React.FC = () => {
         justifyContent: 'space-between',
       }}
     >
-<div
-  style={{
-    boxSizing: 'border-box',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: '15px 80px',
-    gap: '10px',
-    position: 'absolute',
-    width: '280px',
-    height: '86px',
-    left: '986px',
-    top: '848px',
-    background: state1 && state2 && state3 ? 'linear-gradient(275.71deg, #6DC5D9 -3.09%, #9EE2FF 192.8%)' : isLoading ? '#BEBEBE' : '#BEBEBE',
-    border: state1 && state2 && state3 ? '2px solid rgba(109, 197, 217, 0.5)' : isLoading ? '2px solid #AFAFAF' : '2px solid #AFAFAF',
-    boxShadow: state1 && state2 && state3 ? '-4px -4px 15px #FFFFFF, 4px 4px 10px #9CC6D9' : isLoading ? '-4px -4px 15px #FFFFFF, 4px 4px 10px #D9D9D9' : '-4px -4px 15px #FFFFFF, 4px 4px 10px #D9D9D9',
-    borderRadius: '15px',
-    cursor: state1 && state2 && state3 ? 'pointer' : isLoading ? 'not-allowed' : 'not-allowed',
-  }}
-  onClick={handleNextClick}
->
-  <div
-    style={{
-      width: '120px',
-      height: '56px',
-      fontFamily: 'PingFang SC Heavy',
-      fontStyle: 'normal',
-      fontWeight: '400',
-      fontSize: '40px',
-      lineHeight: '56px',
-      textAlign: 'center',
-      color: '#FFFFFF',
-      flex: 'none',
-      order: '0',
-      flexGrow: '0',
-    }}
-  >
-    {isLoading ? (
       <div
-        className="loading-animation"
         style={{
+          boxSizing: 'border-box',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '15px 80px',
+          gap: '10px',
           position: 'absolute',
-          width: '41px',
-          height: '38px',
-          left: '70px',
-          top: '24px',
+          width: '280px',
+          height: '86px',
+          left: '986px',
+          top: '848px',
+          background: state1 && state2 && state3 ? 'linear-gradient(275.71deg, #6DC5D9 -3.09%, #9EE2FF 192.8%)' : isLoading ? '#BEBEBE' : '#BEBEBE',
+          border: state1 && state2 && state3 ? '2px solid rgba(109, 197, 217, 0.5)' : isLoading ? '2px solid #AFAFAF' : '2px solid #AFAFAF',
+          boxShadow: state1 && state2 && state3 ? '-4px -4px 15px #FFFFFF, 4px 4px 10px #9CC6D9' : isLoading ? '-4px -4px 15px #FFFFFF, 4px 4px 10px #D9D9D9' : '-4px -4px 15px #FFFFFF, 4px 4px 10px #D9D9D9',
+          borderRadius: '15px',
+          cursor: state1 && state2 && state3 ? 'pointer' : isLoading ? 'not-allowed' : 'not-allowed',
         }}
+        onClick={handleNextClick}
       >
-        <div className="circle-container">
-          <div className="circle-bottom" />
-          <div className="circle-ring" />
-          <div className="circle-dot" />
+        <div
+          style={{
+            width: '120px',
+            height: '56px',
+            fontFamily: 'PingFang SC Heavy',
+            fontStyle: 'normal',
+            fontWeight: '400',
+            fontSize: '40px',
+            lineHeight: '56px',
+            textAlign: 'center',
+            color: '#FFFFFF',
+            flex: 'none',
+            order: '0',
+            flexGrow: '0',
+          }}
+        >
+          {isLoading ? (
+            <div
+              className="loading-animation"
+              style={{
+                position: 'absolute',
+                width: '41px',
+                height: '38px',
+                left: '70px',
+                top: '24px',
+              }}
+            >
+              <div className="circle-container">
+                <div className="circle-bottom" />
+                <div className="circle-ring" />
+                <div className="circle-dot" />
+              </div>
+            </div>
+          ) : (
+            '下一步'
+          )}
         </div>
       </div>
-    ) : (
-      '下一步'
-    )}
-  </div>
-</div>
       <div>
         <div
           style={{
@@ -226,11 +227,11 @@ const Connect: React.FC = () => {
           top: '668px',
           left: '231px',
           gap: '0px',
-          opacity: loading1 ? '0' : '1',
-          animation: state1 ? 'fade-in 0.5s ease-in-out' : 'none',
+          opacity: loading1 ? '1' : '0',
+          animation: loading1 ? 'fade-in 0.5s ease-in-out' : 'none',
         }}
       >
-        {state1 && <img src={CheckmarkIcon} alt="Checkmark" style={{ width: '38px', height: '38px', color: '#00FF00' }} />}
+        {loading1 && <img src={LoadingGif} alt="loading" />}
       </div>
       <div
         style={{
@@ -240,11 +241,11 @@ const Connect: React.FC = () => {
           top: '668px',
           left: '664px',
           gap: '0px',
-          opacity: loading2 ? '0' : '1',
-          animation: state2 ? 'fade-in 0.5s ease-in-out' : 'none',
+          opacity: loading2 ? '1' : '0',
+          animation: loading2 ? 'fade-in 0.5s ease-in-out' : 'none',
         }}
       >
-        {state2 && <img src={CheckmarkIcon} alt="Checkmark" style={{ width: '38px', height: '38px', color: '#00FF00' }} />}
+        {loading2 && <img src={LoadingGif} alt="loading" />}
       </div>
       <div
         style={{
@@ -254,14 +255,60 @@ const Connect: React.FC = () => {
           top: '668px',
           left: '1097px',
           gap: '0px',
-          opacity: loading3 ? '0' : '1',
-          animation: state3 ? 'fade-in 0.5s ease-in-out' : 'none',
+          opacity: loading3 ? '1' : '0',
+          animation: loading3 ? 'fade-in 0.5s ease-in-out' : 'none',
         }}
       >
-        {state3 && <img src={CheckmarkIcon} alt="Checkmark" style={{ width: '38px', height: '38px', color: '#00FF00' }} />}
+        {loading3 && <img src={LoadingGif} alt="loading" />}
       </div>
-    </div>
-  );
-};
-
+      {state1 && (
+        <div
+          style={{
+            width: '38px',
+            height: '38px',
+            position: 'absolute',
+            top: '668px',
+            left: '231px',
+            gap: '0px',
+            opacity: '1',
+            animation: 'fade-in 0.5s ease-in-out',
+          }}
+        >
+          <img src={CheckmarkIcon} alt="checkmark" />
+        </div>
+      )}
+      {state2 && (
+        <div
+          style={{
+            width: '38px',
+            height: '38px',
+            position: 'absolute',
+            top: '668px',
+            left: '664px',
+            gap: '0px',
+            opacity: '1',
+            animation: 'fade-in 0.5s ease-in-out',
+          }}
+        >
+          <img src={CheckmarkIcon} alt="checkmark" />
+        </div>
+      )}
+      {state3 && (
+  <div
+    style={{
+      width: '38px',
+      height: '38px',
+      position: 'absolute',
+      top: '668px',
+      left: '1097px',
+      gap: '0px',
+      opacity: '1',
+      animation: 'fade-in 0.5s ease-in-out',
+    }}
+  >
+    <img src={CheckmarkIcon} alt="checkmark" />
+  </div>
+)}
+</div>
+); };
 export default Connect;
