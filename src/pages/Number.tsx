@@ -17,7 +17,9 @@ const Number: React.FC = () => {
   };
 
   const handleNextClick = () => {
-    navigate('/list');
+    if (inputValue.trim() !== '') {
+      navigate('/list');
+    }
   };
 
   return (
@@ -41,10 +43,11 @@ const Number: React.FC = () => {
           height: '86px',
           left: '986px',
           top: '848px',
-          background: 'linear-gradient(275.71deg, #6DC5D9 -3.09%, #9EE2FF 192.8%)',
-          border: '2px solid rgba(109, 197, 217, 0.5)',
-          boxShadow: '-4px -4px 15px #FFFFFF, 4px 4px 10px #9CC6D9',
+          background: inputValue.trim() !== '' ? 'linear-gradient(275.71deg, #6DC5D9 -3.09%, #9EE2FF 192.8%)' : '#BEBEBE',
+          border: inputValue.trim() !== '' ? '2px solid rgba(109, 197, 217, 0.5)' : '2px solid #AFAFAF',
+          boxShadow: inputValue.trim() !== '' ? '-4px -4px 15px #FFFFFF, 4px 4px 10px #9CC6D9' : '-4px -4px 15px #FFFFFF, 4px 4px 10px #D9D9D9',
           borderRadius: '15px',
+          cursor: inputValue.trim() !== '' ? 'pointer' : 'not-allowed',
         }}
         onClick={handleNextClick}
       >
