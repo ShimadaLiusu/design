@@ -12,36 +12,37 @@ export interface CircleProgressProps {
 export default function CircleProgress(props: CircleProgressProps) {
   const { min, max, value, label, showValue } = props;
   const [percentage, setPercentage] = useState(
-    ((value - min) / (max - min)) * 100,
+    ((value - min) / (max - min)) * 98
   );
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   useEffect(() => {
-    setPercentage(((value - min) / (max - min)) * 95);
+    setPercentage(((value - min) / (max - min)) * 98);
+    if (isFirstRender) {
+      setIsFirstRender(false);
+    }
   }, [min, max, value, label, showValue]);
 
   return (
     <div className="circle-progress">
       <div className="circle-track"></div>
-<div className="track-container">
-      <div
-        className="circle-fill"
-        style={{
-          background: `conic-gradient(#6dc5d9 0deg, #bee9e6  ${
-            3.6 * percentage
-          }deg, #ffffff00 ${3.6 * percentage}deg 360deg)`,
-        }}
-      ></div>
-      {value !== max && <div className="start-point"></div>}
-      {/* <div className="start-point"></div> */}
+      <div className="track-container">
+        <div
+          className="circle-fill"
+          style={{
+            background: `conic-gradient(#6dc5d9 0deg, #bee9e6 342deg, #ffffff00 342deg 360deg)`,
+          }}
+        ></div>
+        {(value !== max || isFirstRender) && <div className="start-point"></div>}
       </div>
       <div
         className="rotate-wrapper"
         style={{
-          transform: `rotate(${percentage * 3.6}deg)`,
+          transform: `rotate(${isFirstRender ? 342 : percentage * 3.6}deg)`,
         }}
       >
         <div className="end-point"></div>
-        </div>
+      </div>
 
       <div className="value-panel">
         <div className="value-content">
@@ -51,7 +52,6 @@ export default function CircleProgress(props: CircleProgressProps) {
       </div>
 
       <div className="value-fill"></div>
-
     </div>
   );
 }
