@@ -231,7 +231,7 @@ const Connect: React.FC = () => {
           animation: loading1 ? 'fade-in 0.5s ease-in-out' : 'none',
         }}
       >
-        {loading1 && <img src={LoadingGif} alt="loading" />}
+        <img src={LoadingGif} alt="loading" />
       </div>
       <div
         style={{
@@ -245,7 +245,7 @@ const Connect: React.FC = () => {
           animation: loading2 ? 'fade-in 0.5s ease-in-out' : 'none',
         }}
       >
-        {loading2 && <img src={LoadingGif} alt="loading" />}
+        <img src={LoadingGif} alt="loading" />
       </div>
       <div
         style={{
@@ -259,7 +259,7 @@ const Connect: React.FC = () => {
           animation: loading3 ? 'fade-in 0.5s ease-in-out' : 'none',
         }}
       >
-        {loading3 && <img src={LoadingGif} alt="loading" />}
+        <img src={LoadingGif} alt="loading" />
       </div>
       {state1 && (
         <div
