@@ -72,15 +72,11 @@ const PaiBao: React.FC = () => {
         className="next-page-container"
         style={{
           justifyContent: 'space-between',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100vw',
-          height: '100vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.2)',
-          zIndex: 1,
+          
         }}
-      >
+      ><div style={{backgroundColor: 'rgba(0, 0, 0, 0.2)',
+      zIndex: 1,
+      }}>
         <div>
           <div
             style={{
@@ -493,6 +489,7 @@ const PaiBao: React.FC = () => {
     transform: 'translateX(-50%) rotate(90deg)',
   }}
 />
+</div>
 </div>
 </div>
 </CSSTransition>
