@@ -74,10 +74,10 @@ const PaiBao: React.FC = () => {
           justifyContent: 'space-between',
           
         }}
-      ><div style={{backgroundColor: 'rgba(0, 0, 0, 0.2)',
-      zIndex: 1,
-      }}>
-        <div>
+      >
+        <div style={{backgroundColor: 'rgba(0, 0, 0, 0.2)',
+        zIndex: 1,
+        }}>
           <div
             style={{
               position: 'absolute',
@@ -489,7 +489,6 @@ const PaiBao: React.FC = () => {
     transform: 'translateX(-50%) rotate(90deg)',
   }}
 />
-</div>
 </div>
 </div>
 </CSSTransition>
