@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Hash, RouterProvider } from 'react-router-dom';
 import ListPage from './pages/ListPage.tsx';
 import Paitan from './pages/Paitan.tsx';
 import Xitan from './pages/Xitan.tsx';
@@ -14,7 +14,7 @@ import Weihu from './pages/Weihu.tsx';
 import Number from './pages/Number.tsx';
 import Connect from './pages/Connect.tsx';
 
-const router = createBrowserRouter([
+const router = Hash([
   {
     path: '/',
     element: <Connect />,
