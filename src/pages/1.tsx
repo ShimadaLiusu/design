@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import paiBaoBackground from '/src/assets/paitan.svg';
+import paiBaoBackground from './assets/paitan.svg';
 
 import './2.css'
 
@@ -28,7 +28,17 @@ const PaiBao: React.FC = () => {
           zIndex: 1,
         }}
       />
-      <div>
+      <div
+        style={{
+          position: 'relative',
+          width: '100vw',
+          height: '100vh',
+          backgroundImage: `url(${paiBaoBackground})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      >
         <div
           style={{
             position: 'absolute',
