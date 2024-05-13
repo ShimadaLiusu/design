@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'PingFang SC Heavy';
+    src: url('src/assets/PINGFANG HEAVY.ttf');
+  }
+  
+.top-rectangle {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100vw;
+    height: 150px;
+    left: 0px;
+    top: 0px;
+    background: #E7F1F3;
+    border-bottom: 2px solid #6DC5D9;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(255, 255, 255, 0.25);
+  }

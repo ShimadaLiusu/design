@@ -1,0 +1,50 @@
+.startButton{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 750.81px;
+    left: 281px;
+    gap: 0px;
+    rotate:-180deg;
+    border-radius: 75px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    border: 1px solid #D9D9D933;
+    background: linear-gradient(134.06deg, #72C7DB 29.78%, rgba(217, 217, 217, 0.5) 174.69%);
+    box-shadow: -4px -4px 10px 0px #00000033, 4px 4px 10px 0px #FFFFFF;
+    
+}
+.subButton{
+/* Rectangle 3795 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 116px;
+    top: 682px;
+
+    background: linear-gradient(132.49deg, #F4F5F7 51.3%, rgba(244, 245, 247, 0.9925) 78.49%, rgba(217, 217, 217, 0.5) 174.88%);
+    border: 1px solid rgba(217, 217, 217, 0.2);
+    box-shadow: -4px -4px 10px #FFFFFF, 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 75px;
+
+}
+.addButton{
+
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 487px;
+    top: 682px;
+
+    background: linear-gradient(132.49deg, #F4F5F7 51.3%, rgba(244, 245, 247, 0.9925) 78.49%, rgba(217, 217, 217, 0.5) 174.88%);
+    border: 1px solid rgba(217, 217, 217, 0.2);
+    box-shadow: -4px -4px 10px #FFFFFF, 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 75px;
+
+}

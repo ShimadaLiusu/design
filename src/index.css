@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'PingFang SC Heavy';
+  src: url('src/assets/PINGFANG HEAVY.ttf');
+}
+body {
+  /* background-color: rgb(58, 60, 64); */
+  background-color: #F9F9FA;
+  transform:scale(0.87);
+}
