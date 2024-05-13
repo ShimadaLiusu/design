@@ -38,7 +38,7 @@ export default function CircleProgress(props: CircleProgressProps) {
       <div
         className="rotate-wrapper"
         style={{
-          transform: `rotate(${isFirstRender ? 342 : percentage * 3.6}deg)`,
+          transform: `rotate(${isFirstRender ? 352.8 : percentage * 3.6}deg)`,
         }}
       >
         <div className="end-point"></div>
