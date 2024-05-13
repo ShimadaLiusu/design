@@ -1,7 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useTimer } from 'react-use-precision-timer';
 import CircleProgress from '../components/CircleProgress';
-
+import Minus from '/src/assets/minus.png';
+import Plus from '/src/assets/plus.png';
 import './Timer.css';
 
 export interface TimerProps {
@@ -73,9 +74,9 @@ export default function Timer(props: TimerProps) {
 
   return (
     <>
-      <button className="subButton" onClick={() => subHandler(60)}><img src={'src/assets/minus.svg'} alt="Minus Button" ></img></button>
+      <button className="subButton" onClick={() => subHandler(60)}><img src={Minus} alt="Minus Button" ></img></button>
       <button className="startButton" onClick={clickHandler}> <img src={running ? 'src/assets/pause.svg' : 'src/assets/start.svg'} alt="Start Button"  style={{transform: 'rotate(-180deg) translateX(3px)'}}></img></button>
-      <button className="addButton" onClick={() => addHandler(60)}><img src={'src/assets/plus.svg'} alt="Plus Button" ></img></button>
+      <button className="addButton" onClick={() => addHandler(60)}><img src={Plus} alt="Plus Button" ></img></button>
       <CircleProgress
         min={0}
         max={max}
