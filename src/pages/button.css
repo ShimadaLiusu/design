@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'PingFang SC Heavy';
-    src: url('src/assets/PINGFANG HEAVY.ttf');
+    src: url('../assets/PINGFANG HEAVY.ttf');
   }
 .buttonYes {
     box-sizing: border-box;

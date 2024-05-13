@@ -1,10 +1,10 @@
 import { useEffect, useState, useCallback } from 'react';
 import { useTimer } from 'react-use-precision-timer';
 import CircleProgress from '../components/CircleProgress';
-import Minus from '/src/assets/minus.svg';
-import Plus from '/src/assets/plus.svg';
-import pauseIcon from '/src/assets/pause.svg';
-import startIcon from '/src/assets/start.svg';
+import Minus from '../assets/minus.svg';
+import Plus from '../assets/plus.svg';
+import pauseIcon from '../assets/pause.svg';
+import startIcon from '../assets/start.svg';
 
 import './Timer.css';
 
