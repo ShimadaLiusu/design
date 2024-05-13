@@ -16,7 +16,7 @@ export default function CircleProgress(props: CircleProgressProps) {
   );
 
   useEffect(() => {
-    setPercentage(((value - min) / (max - min)) * 100);
+    setPercentage(((value - min) / (max - min)) * 95);
   }, [min, max, value, label, showValue]);
 
   return (
