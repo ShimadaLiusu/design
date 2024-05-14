@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import paiBaoBackground from './assets/paitan.svg';
+import paiBaoBackground from '../assets/paitan.svg';
 
 import './2.css'
 
