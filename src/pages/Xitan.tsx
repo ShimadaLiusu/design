@@ -26,10 +26,10 @@ const Xitan: React.FC = () => {
     navigate('/paitan');
   };
   const handleBaogaoClick = () => {
-    navigate('/1');
+    navigate('/baogao');
   };
   const handleWeihuClick = () => {
-    navigate('/2');
+    navigate('/weihu');
   };
 
   return (

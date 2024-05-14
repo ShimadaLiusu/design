@@ -35,10 +35,10 @@ const PaiTan: React.FC = () => {
     navigate('/xitan');
   };
   const handleBaogaoClick = () => {
-    navigate('/1');
+    navigate('/baogao');
   };
   const handleWeihuClick = () => {
-    navigate('/2');
+    navigate('/weihu');
   };
   return (
     <CSSTransition
