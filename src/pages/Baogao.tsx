@@ -31,7 +31,7 @@ const Baogao: React.FC = () => {
   };
 
   const handleWeihuClick = () => {
-    navigate('/2');
+    navigate('/weihu');
   };
   
   return (
